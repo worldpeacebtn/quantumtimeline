@@ -1,7 +1,3 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
-  basePath: '/quantumtimeline',
-  assetPrefix: '/quantumtimeline/',
-};
-
+const nextConfig = {};
 module.exports = nextConfig;
