@@ -15,7 +15,7 @@ type TimelineItem = {
 const sampleData: TimelineItem[] = [
   {
     id: 't1',
-    time: '2042-01-05',
+    time: '2042-03-05',
     title: 'First Quantum Link',
     subtitle: 'Low-Earth Node Live',
     description:
@@ -426,4 +426,5 @@ export default function Page() {
       `}</style>
     </main>
   );
+
 }
