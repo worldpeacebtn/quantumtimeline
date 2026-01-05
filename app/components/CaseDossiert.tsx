@@ -1,3 +1,5 @@
+'use client';
+
 export default function CaseDossier() {
   return (
     <section className="mt-24 space-y-16">

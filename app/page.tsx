@@ -2,7 +2,7 @@
 'use client';
 
 import React, { useEffect, useRef, useState } from 'react';
-import CaseDossier from "@/components/CaseDossier"; 
+import CaseDossier from './components/CaseDossiert';
 
 type TimelineItem = {
   id: string;
