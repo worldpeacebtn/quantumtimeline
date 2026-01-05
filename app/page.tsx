@@ -2,6 +2,7 @@
 'use client';
 
 import React, { useEffect, useRef, useState } from 'react';
+import CaseDossier from "@/components/CaseDossier"; 
 
 type TimelineItem = {
   id: string;
@@ -424,7 +425,11 @@ export default function Page() {
         }
 
       `}</style>
+
+      <CaseDossier />
+
     </main>
   );
 
 }
+
