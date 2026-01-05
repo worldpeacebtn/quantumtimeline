@@ -1,0 +1,98 @@
+/* ================================
+   CYBERPUNK VISUAL LAYER (SAFE)
+   No DOM assumptions
+   No pseudo attr hacks
+   ================================ */
+
+:root {
+  --neon-cyan: #00fff7;
+  --neon-pink: #ff2bdc;
+}
+
+/* -------- HEADER & SECTION TITLES -------- */
+
+section h2,
+section h3 {
+  text-shadow:
+    0 0 6px rgba(0,255,247,0.6),
+    0 0 18px rgba(0,255,247,0.25);
+}
+
+/* -------- PANELS (existing divs) -------- */
+
+section > div > div,
+section table,
+section .grid > div {
+  position: relative;
+}
+
+/* neon edge + inner glow */
+section > div > div,
+section table {
+  box-shadow:
+    0 0 12px rgba(0,255,247,0.15),
+    inset 0 0 18px rgba(0,255,247,0.05);
+}
+
+/* -------- SCANLINE OVERLAY -------- */
+
+section > div > div::after,
+section table::after {
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(255,255,255,0.025),
+    rgba(255,255,255,0.025) 1px,
+    transparent 1px,
+    transparent 3px
+  );
+  opacity: 0.35;
+}
+
+/* -------- TABLE EFFECTS -------- */
+
+table tbody tr {
+  transition: background 0.25s ease, box-shadow 0.25s ease;
+}
+
+table tbody tr:hover {
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(0,255,247,0.12),
+    transparent
+  );
+  box-shadow: inset 0 0 18px rgba(0,255,247,0.25);
+}
+
+/* -------- PROFILE CARDS -------- */
+
+.grid > div {
+  box-shadow:
+    0 0 10px rgba(0,255,247,0.12),
+    inset 0 0 14px rgba(0,255,247,0.04);
+}
+
+/* -------- TEXT SHARPENING -------- */
+
+p,
+td,
+th {
+  text-shadow: 0 0 1px rgba(0,255,247,0.35);
+}
+
+/* -------- SUBTLE FLICKER (SAFE) -------- */
+
+@keyframes cyber-flicker {
+  0%, 100% { opacity: 1; }
+  97% { opacity: 0.85; }
+  98% { opacity: 0.6; }
+  99% { opacity: 0.9; }
+}
+
+section h2 {
+  animation: cyber-flicker 6s infinite;
+}

@@ -1,11 +1,17 @@
 'use client';
 
+import './casedossier-cyber.css';
+import './casedossier-glitch.css';
+
+
 export default function CaseDossier() {
   return (
     <section className="mt-24 space-y-16">
+<h1 className="scale:3 !important;" data-text="CASE DOSSIER">CASE DOSSIER</h1>
 
       {/* HEADER */}
       <div className="border border-accent/40 p-6 bg-black/60">
+
         <h2 className="text-xl tracking-widest text-accent">
           CASE X//0 — WITNESS X0
         </h2>

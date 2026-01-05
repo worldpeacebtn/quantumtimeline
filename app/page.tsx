@@ -426,7 +426,9 @@ export default function Page() {
 
       `}</style>
 
-      <CaseDossier />
+<div className="case-dossier quantum-glitch">
+  <CaseDossier />
+</div>
 
     </main>
   );
